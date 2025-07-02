@@ -29,6 +29,11 @@
       border-right: 2px solid #0f0;
       display: inline-block;
     }
+    #visitor {
+      margin-top: 20px;
+      font-size: 0.9em;
+      color: #0f0;
+    }
     section {
       max-width: 800px;
       margin: 40px auto;
@@ -56,6 +61,7 @@
     <img src="https://raw.githubusercontent.com/ni30mi5hr4/ni30mi5hr4/refs/heads/main/assets/banner.png" alt="Banner">
     <h1>Hello, friend.</h1>
     <p id="tagline"></p>
+    <div id="visitor"></div>
   </header>
 
   <section>
@@ -86,8 +92,9 @@
   </footer>
 
   <script>
+    // Typewriter
     const text = "Slipping through cracks — API Reverse Engineer | WebApp Pentester | Web Developer";
-    const speed = 50; // typing speed in ms
+    const speed = 50;
     let i = 0;
     function typeWriter() {
       if (i < text.length) {
@@ -97,6 +104,19 @@
       }
     }
     window.onload = typeWriter;
+
+    // IP & Location
+    fetch("https://ipinfo.io/json?token=cf2773cc141e7d") // Optional: Use your token for better quota
+      .then(response => response.json())
+      .then(data => {
+        const city = data.city || "Unknown";
+        const ip = data.ip || "???.???.???.???";
+        document.getElementById("visitor").innerText =
+          `I see you, ${city}. Your IP: ${ip}`;
+      })
+      .catch(error => {
+        console.error(error);
+      });
   </script>
 </body>
 </html>
