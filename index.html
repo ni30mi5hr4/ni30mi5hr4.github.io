@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ni30mi5hr4 — Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      color: #0f0;
+      font-family: monospace, sans-serif;
+      overflow-x: hidden;
+    }
+    header {
+      text-align: center;
+      padding: 50px 20px 20px;
+    }
+    header img {
+      max-width: 600px;
+      width: 80%;
+    }
+    h1 {
+      font-size: 2em;
+    }
+    #tagline {
+      font-size: 1.2em;
+      white-space: pre;
+      border-right: 2px solid #0f0;
+      display: inline-block;
+    }
+    section {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.6;
+    }
+    a {
+      color: #0ff;
+      text-decoration: none;
+    }
+    ul {
+      list-style: square;
+      margin-left: 20px;
+    }
+    footer {
+      text-align: center;
+      margin: 50px 0;
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="assets/banner.png" alt="Banner">
+    <h1>Hello, friend.</h1>
+    <p id="tagline"></p>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>I’m Ni30mi5hr4 — just another glitch in the system. A tech postgraduate who turns curiosity into exploits. I break, reverse, and rebuild the web to make it stronger. Taking what’s hidden, giving nothing back.</p>
+
+    <h2>Skills</h2>
+    <ul>
+      <li>Languages: C, C++, Java, JavaScript, Python, PHP, Bash, .NET, C#</li>
+      <li>Frontend & Backend: HTML, CSS</li>
+      <li>Database: MySQL</li>
+      <li>API Testing & Reversing: Postman, Custom Scripts</li>
+      <li>Web Application Development</li>
+    </ul>
+
+    <h2>Projects</h2>
+    <p>Coming soon — custom tools, exploits, and open source web app hacks. Stay tuned.</p>
+
+    <h2>Contact</h2>
+    <p>
+      📧 ni30mi5hr4@gmail.com<br>
+      🔗 <a href="https://github.com/Ni30mi5hr4" target="_blank">GitHub</a>
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 Ni30mi5hr4 — Control is an illusion.
+  </footer>
+
+  <script>
+    const text = "Slipping through cracks — API Reverse Engineer | WebApp Pentester | Web Developer";
+    const speed = 50; // typing speed in ms
+    let i = 0;
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("tagline").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+    window.onload = typeWriter;
+  </script>
+</body>
+</html>
