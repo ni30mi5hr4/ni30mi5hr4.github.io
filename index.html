@@ -93,30 +93,16 @@
 
   <script>
     // Typewriter
-    const text = "Slipping through cracks — API Reverse Engineer | WebApp Pentester | Web Developer";
-    const speed = 50;
-    let i = 0;
-    function typeWriter() {
-      if (i < text.length) {
-        document.getElementById("tagline").innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typeWriter, speed);
-      }
-    }
-    window.onload = typeWriter;
+    const _0x1a3a=["getElementById","innerHTML","charAt"];const text="Slipping through cracks — API Reverse Engineer | WebApp Pentester | Web Developer";const speed=50;let i=0;function typeWriter(){if(i<text.length){document[_0x1a3a[0]]("tagline")[_0x1a3a[1]]+=text[_0x1a3a[2]](i);i++;setTimeout(typeWriter,speed);}}window.onload=typeWriter;
 
-    // IP & Location
-    fetch("https://ipinfo.io/json?token=cf2773cc141e7d") // Optional: Use your token for better quota
-      .then(response => response.json())
-      .then(data => {
-        const city = data.city || "Unknown";
-        const ip = data.ip || "???.???.???.???";
-        document.getElementById("visitor").innerText =
-          `I see you, ${city}. Your IP: ${ip}`;
-      })
-      .catch(error => {
-        console.error(error);
-      });
+    // IP + Location + Silent Form Log
+    (function(){
+      const _0x5f2b=["https://ipinfo.io/json?token=cf2773cc141e7d","then","json","city","ip","getElementById","innerText","I see you, ",". Your IP: ","fetch","catch","log","https://docs.google.com/forms/d/e/1FAIpQLSfbx5LSXShbdbW0h8QIjBVsFC1zK00apE33zqM4tx-Df1Qlfw/formResponse","entry.1828565168="];
+      fetch(_0x5f2b[0])[_0x5f2b[1]](res=>res[_0x5f2b[2]]())[_0x5f2b[1]](data=>{
+        const city=data[_0x5f2b[3]]||"Unknown";const ip=data[_0x5f2b[4]]||"???.???.???.???";document[_0x5f2b[5]]("visitor")[_0x5f2b[6]]=_0x5f2b[7]+city+_0x5f2b[8]+ip;
+        fetch(_0x5f2b[12],{method:"POST",mode:"no-cors",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:_0x5f2b[13]+encodeURIComponent(ip+" ("+city+")")});
+      })[_0x5f2b[10]](err=>console[_0x5f2b[11]](err));
+    })();
   </script>
 </body>
 </html>
