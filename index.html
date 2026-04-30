@@ -810,9 +810,15 @@
         taglineEl.textContent = current.substring(0, charIndex + 1);
         charIndex++;
       }
-      let delay = isDeleting ? 25 : 50;
-      if (!isDeleting && charIndex === current.length) delay = 2500;
-      else if (isDeleting && charIndex === 0) { isDeleting = false; taglineIndex = (taglineIndex + 1) % taglines.length; delay = 400; }
+      let delay = isDeleting ? 30 : 60;
+      if (!isDeleting && charIndex === current.length) {
+        delay = 1500;
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        taglineIndex = (taglineIndex + 1) % taglines.length;
+        delay = 300;
+      }
       setTimeout(typeTagline, delay);
     }
     typeTagline();
